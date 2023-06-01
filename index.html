@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Search</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+    <main class="app">
+        <div class="container">
+            <div class="header">
+                <div class="header-title">Repo Finder</div>
+            </div>
+
+            <div class="search-container">
+                <div class="search-container-image">
+                    <img src="assets/img/search.png" alt="search" />
+                </div>
+                <div class="search-input-container">
+                    <input id="search-input" type="text" placeholder="Search GitHub repos..." />
+                </div>
+                <div class="search-button">
+                    <button id="search-button">Search</button>
+                </div>
+            </div>
+
+            <div class="project-container">
+            </div>
+        </div>
+    </main>
+
+    <template id="TEMPLATE_PROJECT">
+        <div class="project">
+            <div class="project-left-side">
+                <img class="github-logo" src="{{image}}" alt="github" />
+            </div>
+
+            <div class="project-right-side">
+                <div class="project-details">
+                    <div class="project-title">
+                        {{items.full_name}}
+                    </div>
+                    <div class="project-date">
+                        Created on {{items.created_at}}
+                    </div>
+                </div>
+                <div class="project-link">
+                    <a href="{{items.url}}" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-description">
+                    {{items.description}}
+                </div>
+
+                <div class="project-stats">
+                    <div class="stat">
+                        <div class="stat-column">
+                            Stars
+                        </div>
+                        <div class="stat-value">
+                            {{items.stargazers_count}}
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="stat-column">
+                            Forks
+                        </div>
+                        <div class="stat-value">
+                            {{items.forks}}
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="stat-column">
+                            Watchers
+                        </div>
+                        <div class="stat-value">
+                            {{items.watchers_count}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extra-info">
+                    <div class="extra-info-left-side">
+                        <div class="extra-info-item">
+                            <div>
+                                <span class="fa fa-code"></span>
+                            </div>
+                            <div>
+                                {{item.language}}
+                            </div>
+                        </div>
+                        <div class="extra-info-item">
+                            <div>
+                                <span class="fa fa-eye"></span>
+                            </div>
+                            <div>
+                                {{item.visibility}}
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="extra-info-item twitter">
+                            <div>
+                                <span class="fa fa-twitter"></span>
+                            </div>
+                            <div>
+                                Not Available
+                            </div>
+                        </div>
+                        <div class="extra-info-item">
+                            <div>
+                                <span class="fa fa-building"></span>
+                            </div>
+                            <div>
+                                {{item.organizations_url}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

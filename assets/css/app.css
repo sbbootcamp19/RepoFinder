@@ -1,0 +1,240 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+:root {
+    font-size: 10px;
+
+    --dark-blue: #141c2f;
+    --blue: #1f2a48;
+    --light-blue: #0078fc;
+    --blue-hover: #0060c9;
+    --gray: #d2d2d2;
+    --dark-gray: #c4c5ca;
+}
+
+html, body, .app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--dark-blue);
+}
+
+.loading {
+    color: #FFF;
+    font-size: 5rem;
+}
+
+.app {
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+
+    padding-top: 50px;
+}
+
+.container {
+    width: 50%;
+}
+
+.header-title {
+    font-size: 3rem;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+
+.search-container {
+    background-color: var(--blue);
+
+    display: flex;
+    flex-direction: row;
+    
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.search-container-image {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container-image img {
+    height: 30px;
+}
+
+.search-input-container {
+    width: 70%;
+}
+
+.search-input-container input {
+    outline: none;
+    background-color: var(--blue);
+    border: 0;
+    /* show why the color isn't changing */
+    color: #FFF;
+    font-size: 2rem;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFF;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #FFF;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #FFF;
+}
+
+.search-button {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    color: #FFF;
+    background-color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+    padding: .8em 1.5em;
+    font-weight: 500;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: var(--blue-hover);
+    border: 1px solid var(--blue-hover);
+}
+
+.project-container {
+    margin-top: 20px;
+    background-color: var(--dark-blue);
+}
+
+.project {
+    border-radius: 10px;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+
+    padding: 3em;
+    margin-bottom: 10px;
+}
+
+.project-left-side {
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.github-logo {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.project-right-side {
+    width: 70%;
+}
+
+.project-right-side div {
+    margin-bottom: 10px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-title {
+    color: #FFF;
+    font-size: 2rem;
+}
+
+.project-date {
+    color: var(--gray);
+    font-size: 1.5rem;
+}
+
+.project-link a {
+    font-size: 1.3rem;
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+.project-description {
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+}
+
+.project-stats {
+    background-color: var(--dark-blue);
+    padding: 2em;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.stat-column {
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.stat-value {
+    color: #FFF;
+    font-size: 2rem;
+}
+
+.extra-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.extra-info span {
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.extra-info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #FFF;
+
+    font-size: 1.5rem;
+}
+
+.twitter,
+.twitter span {
+    color: gray
+}
+
+.extra-info-item div {
+    margin-right: 10px;
+}
+
+.extra-info-left-side {
+    width: 50%;
+}
+
+.extra-info-right-side {
+    width: 50%;
+}
